@@ -1,0 +1,20 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MovieBooking_Backend.Dtos.ShowtimeSeatDtos.UpdateDtos
+{
+    public class ShowtimeSeatUpdateDto
+    {
+        public int Id { get; set; }
+
+        public int ShowtimeId { get; set; }
+
+        public int SeatId { get; set; }
+
+        [StringLength(20)]
+        public string Status { get; set; } = null!;
+
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
+    }
+}

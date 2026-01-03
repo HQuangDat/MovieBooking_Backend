@@ -1,0 +1,23 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace MovieBooking_Backend.Dtos.ShowtimeDtos.UpdateDtos
+{
+    public class ShowtimeUpdateDto
+    {
+        public int Id { get; set; }
+
+        public int MovieId { get; set; }
+
+        public int RoomId { get; set; }
+
+        public DateTime StartTime { get; set; }
+
+        public DateTime EndTime { get; set; }
+
+        [StringLength(20)]
+        public string? Status { get; set; }
+
+        public bool? IsDeleted { get; set; }
+    }
+}
