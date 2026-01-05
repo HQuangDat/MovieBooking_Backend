@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieBooking_Backend.Services.Product;
 
 namespace MovieBooking_Backend.Controllers
 {
@@ -7,5 +8,10 @@ namespace MovieBooking_Backend.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly IProductService _productService;
+        public ProductController(IProductService productService)
+        {
+            _productService = productService;
+        }
     }
 }

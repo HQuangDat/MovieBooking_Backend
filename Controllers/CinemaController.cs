@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieBooking_Backend.Services.Cinema;
 
 namespace MovieBooking_Backend.Controllers
 {
@@ -7,5 +8,10 @@ namespace MovieBooking_Backend.Controllers
     [ApiController]
     public class CinemaController : ControllerBase
     {
+        private readonly ICinemaService _cinemaService;
+        public CinemaController(ICinemaService cinemaService)
+        {
+            _cinemaService = cinemaService;
+        }
     }
 }
